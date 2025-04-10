@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-image: url('media/crown.png');
+    background-repeat: repeat; 
+    background-size: contain;
+    background-size: 100px 100px; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 20px;
+}
+
+.account-icon a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.account-info {
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membership-btn {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.membership-info {
+    display: none;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membership-status {
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.8);
+}
+
+.membership-benefits-lame {
+    color: #362506;
+}
+
+.membership-benefits {
+    font-style: italic;
+    color: #0073e6;
+}
+
+.hidden-unsubscribe {
+    font-size: 12px;
+    color: gray;
+    display: block;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+/* Additional modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    max-width: 600px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#obviousOption {
+    background-color: #007BFF;
+    color: white;
+}
+
+#hiddenOption {
+    background-color: transparent;
+    color: #888;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.hidden-option {
+    display: none;
+}
+
+#feedbackModal .modal-content {
+    width: 500px;
+}
+
+#nextBtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Challenge overlay styling */
+.challenge-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.challenge-btn {
+    position: absolute; /* Make the button move freely */
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Initial green color */
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Smooth transition for movement */
+    z-index: 1;
+}
+
+
+
+
+#timer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 0;
+}
+
+
+/* Loading Pop-Up */
+.loading-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Long Delay Pop-Up */
+.long-delay-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.refresh-btn {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verysafesite.com - Account</title>
+    <link rel="stylesheet" href="account.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>FlyAway Airlines</h1>
+        <div class="account-icon"><a href="main.html">&#9664; Back to Home</a></div>
+    </header>
+
+    <div class="account-container">
+        <div class="profile-picture" style="background-image: url('media/king_pingu.jpg');"></div>
+        <div class="account-info">
+            <h2>Account Information</h2>
+            <p><strong>Name:</strong> Mr Pingu</p>
+            <p><strong>Date of Birth:</strong> 07/03/1990</p>
+            <p><strong>Email:</strong> king.ping@nootnoot.com</p>
+            <button class="membership-btn" onclick="showMembershipInfo()">View Membership Details</button>
+            <div id="membershipDetails" class="membership-info">
+                <p><strong>Subscription:</strong> <span class="membership-status">Premium Gold Member</span></p>
+                <p><strong>Money saved:</strong> $3.12 (enough to afford ... something?)</p>
+                <p class="membership-benefits">✨ Unlimited priority boarding, extra baggage, and lounge access! ✨</p>
+                <p class="membership-benefits">💰 Our Premium members save an average of $500 per year! 💰</p>
+                <p class="membership-benefits">🚀 Exclusive deals only for Premium members! 🚀</p>
+                <span class="hidden-unsubscribe" onclick="showModal()">Lose access to all these benefits?</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for initial unsubscribe decision -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure? You’re one step away from losing all your savings!</p>
+            <button id="obviousOption" class="modal-button">Keep my advantages</button>
+            <button id="hiddenOption" class="modal-button hidden-option">Leave the community</button>
+        </div>
+    </div>
+
+    <!-- Feedback form modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <h2>We value your opinion very much!</h2>
+            <p>Please give us your feedback:</p>
+            <form id="feedbackForm">
+                <label for="reason">Why are you unsubscribing?</label>
+                <textarea id="reason" name="reason" rows="4" cols="50"></textarea><br><br>
+
+                <label for="rating">How would you rate your experience?</label>
+                <select id="rating" name="rating">
+                    <option value="1">1 - Very bad</option>
+                    <option value="2">2 - Bad</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select><br><br>
+
+                <label for="improvements">What could we do better?</label>
+                <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea><br><br>
+
+                <input type="checkbox" id="subscribeAgain" checked>
+                <label for="subscribeAgain">Change my mind and subscribe for the next 3 months.</label><br><br>
+
+                <button type="button" id="nextBtn">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Challenge Overlay Modal -->
+    <div id="challengeOverlay" class="challenge-overlay">
+        <h2>Well, if you want to unsubscribe:</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>Just click on the button!</p>
+        <button id="challengeBtn" class="challenge-btn" onclick="clickUnsubscribeButton()">Unsubscribe</button>
+        <p id="timer"></p>
+    </div>
+
+    <!-- Loading Pop-Up -->
+    <div id="loadingPopup" class="loading-popup">
+        <p id="loadingMessage">Loading...</p>
+    </div>
+
+    <!-- Long-Delay Pop-Up -->
+    <div id="longDelayPopup" class="long-delay-popup">
+        <p>Loading...</p>
+        <p>This seems to take a long time...</p>
+        <button id="refreshBtn" class="refresh-btn" onclick="refreshPage()">Refresh?</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
